@@ -28,23 +28,23 @@ function keyUp(e) {
 }
 //Function to play game
 function playGame() {
-  moveLines();
-  moveEnemy();
   let car = document.querySelector(".car");
   let road = gameArea.getBoundingClientRect();
-  console.log("Game started");
+  //   console.log("Game started");
   if (player.start) {
+    moveLines();
+    moveEnemy(car);
     //Adding boundary conditions
-    if (keys.ArrowRight && player.x < road.width - 100 + 14) {
+    if (keys.ArrowRight && player.x < road.width - 50) {
       player.x += player.speed;
     }
-    if (keys.ArrowLeft && player.x > -28) {
+    if (keys.ArrowLeft && player.x > 0) {
       player.x -= player.speed;
     }
     if (keys.ArrowUp && player.y > road.top + 200) {
       player.y -= player.speed;
     }
-    if (keys.ArrowDown && player.y < road.bottom - 125) {
+    if (keys.ArrowDown && player.y < road.bottom - 70) {
       player.y += player.speed;
     }
     car.style.top = player.y + "px";
@@ -52,24 +52,41 @@ function playGame() {
     window.requestAnimationFrame(playGame);
   }
 }
+//Function to check if cars collide
+function isCollide(player, enemy) {
+  let playerCar = player.getBoundingClientRect();
+  let enemyCar = enemy.getBoundingClientRect();
+  return !(
+    playerCar.top > enemyCar.bottom ||
+    playerCar.bottom < enemyCar.top ||
+    playerCar.left > enemyCar.right - 20 ||
+    playerCar.right < enemyCar.left + 20
+  );
+}
 //Function to move road lines
 function moveLines() {
   let lines = document.querySelectorAll(".lines");
   lines.forEach(function (line) {
-    if (line.y > 640) {
-      line.y = -110;
+    if (line.y > 700) {
+      line.y -= 750;
     }
     line.y += player.speed;
     line.style.top = line.y + "px";
   });
 }
 //Function to move enemy cars
-function moveEnemy() {
+function moveEnemy(car) {
   let enemies = document.querySelectorAll(".enemy");
   enemies.forEach(function (enemy) {
-    if (enemy.y > 750) {
+    if (isCollide(car, enemy)) {
+      console.log("HIT");
+      player.start = false;
+    }
+    if (enemy.y >= 750) {
       enemy.y = -300;
-      enemy.style.left = Math.floor(Math.random() * 320) + "px";
+      let randomEnemy = Math.floor(Math.random() * 3);
+      enemy.style.backgroundImage = `url(${enemyCars[randomEnemy]})`;
+      enemy.style.left = Math.floor(Math.random() * 350) + "px";
     }
     enemy.y += player.speed;
     enemy.style.top = enemy.y + "px";
@@ -102,14 +119,12 @@ function startGame() {
     enemy.style.top = enemy.y + "px";
     let randomEnemy = Math.floor(Math.random() * 3);
     enemy.style.backgroundImage = `url(${enemyCars[randomEnemy]})`;
-    enemy.style.left = Math.floor(Math.random() * 320) + "px";
-    console.log(enemy.style.left);
+    enemy.style.left = Math.floor(Math.random() * 350) + "px";
     gameArea.appendChild(enemy);
   }
 }
 //Key event listeners
 document.addEventListener("keydown", keyDown);
 document.addEventListener("keyup", keyUp);
-
 //Start game event listener
 messageArea.addEventListener("click", startGame);
