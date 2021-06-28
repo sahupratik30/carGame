@@ -2,7 +2,7 @@
 const score = document.querySelector(".score");
 const gameArea = document.querySelector(".game_area");
 const messageArea = document.querySelector(".message_area");
-let player = { speed: 5 };
+let player = { speed: 8 };
 //Declaring object to store keys
 let keys = {
   ArrowUp: false,
@@ -50,6 +50,7 @@ function playGame() {
     car.style.top = player.y + "px";
     car.style.left = player.x + "px";
     window.requestAnimationFrame(playGame);
+    score.innerHTML = `Score: ${player.score++}`;
   }
 }
 //Function to check if cars collide
@@ -59,9 +60,15 @@ function isCollide(player, enemy) {
   return !(
     playerCar.top > enemyCar.bottom ||
     playerCar.bottom < enemyCar.top ||
-    playerCar.left > enemyCar.right - 20 ||
-    playerCar.right < enemyCar.left + 20
+    playerCar.left > enemyCar.right - 22 ||
+    playerCar.right < enemyCar.left + 22
   );
+}
+//Function to end game
+function endGame() {
+  player.start = false;
+  messageArea.classList.remove("hide");
+  messageArea.innerHTML = `GAME OVER!!<br>Your Score is ${player.score}<br>Click here to Restart the game`;
 }
 //Function to move road lines
 function moveLines() {
@@ -79,8 +86,7 @@ function moveEnemy(car) {
   let enemies = document.querySelectorAll(".enemy");
   enemies.forEach(function (enemy) {
     if (isCollide(car, enemy)) {
-      console.log("HIT");
-      player.start = false;
+      endGame();
     }
     if (enemy.y >= 750) {
       enemy.y = -300;
@@ -94,9 +100,10 @@ function moveEnemy(car) {
 }
 //Function to start game
 function startGame() {
-  player.start = true;
+  gameArea.innerHTML = "";
   messageArea.classList.add("hide");
-  gameArea.classList.remove("hide");
+  player.start = true;
+  player.score = 0;
   window.requestAnimationFrame(playGame);
   let car = document.createElement("div");
   car.setAttribute("class", "car");
