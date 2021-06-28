@@ -20,3 +20,7 @@ A car game made using JavaScript 🚘.
 - Make the changes
 - Generate a pull request
 ```
+## Screenshots
+![Screenshot1](https://user-images.githubusercontent.com/80754608/123685220-137da100-d86c-11eb-93ae-f3438059ec41.png)
+![Screenshot2](https://user-images.githubusercontent.com/80754608/123685224-14163780-d86c-11eb-89d3-e3beaa315e6f.png)
+![Screenshot3](https://user-images.githubusercontent.com/80754608/123685232-15476480-d86c-11eb-9ead-3db7d5f411fc.png)
