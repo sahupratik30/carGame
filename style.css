@@ -12,6 +12,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  overflow-y: hidden;
 }
 .main_content .score {
   position: absolute;
@@ -64,13 +65,14 @@
   -o-border-radius: 20px;
   cursor: pointer;
 }
-.main_content .game_area .car {
+.main_content .game_area .car,
+.main_content .game_area .enemy {
+  position: absolute;
   width: 100px;
   height: 120px;
   background-image: url(images/car.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  position: absolute;
   left: -28px;
   bottom: 100px;
   z-index: 1;
