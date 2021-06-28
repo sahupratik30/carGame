@@ -1,4 +1,8 @@
 ## About the application
+
+![Badge](https://img.shields.io/badge/car--game-application-brightgreen)
+![Badge](https://img.shields.io/badge/open--source-%E2%9D%A4-red)
+
 A car game made using JavaScript 🚘.
 
 ## Techonology Stack
