@@ -20,6 +20,10 @@ A car game made using JavaScript 🚘.
 - Make the changes
 - Generate a pull request
 ```
+## Deployment
+  <img align="left" alt="firebase" width="35px" src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" />
+  Firebase<br>
+  
 ## Screenshots
 ![Screenshot1](https://user-images.githubusercontent.com/80754608/123685220-137da100-d86c-11eb-93ae-f3438059ec41.png)
 ![Screenshot2](https://user-images.githubusercontent.com/80754608/123685224-14163780-d86c-11eb-89d3-e3beaa315e6f.png)
