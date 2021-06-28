@@ -32,7 +32,7 @@
 }
 .main_content .game_area {
   height: 100vh;
-  width: 450px;
+  width: 400px;
   margin: 0 auto;
   background-color: rgb(53, 53, 53);
   position: relative;
@@ -68,12 +68,12 @@
 .main_content .game_area .car,
 .main_content .game_area .enemy {
   position: absolute;
-  width: 100px;
-  height: 120px;
+  width: 50px;
+  height: 70px;
   background-image: url(images/car.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  left: -28px;
+  left: 0px;
   bottom: 100px;
   z-index: 1;
 }
