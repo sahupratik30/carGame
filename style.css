@@ -73,6 +73,19 @@
   position: absolute;
   left: -28px;
   bottom: 100px;
+  z-index: 1;
+}
+.main_content .game_area .lines {
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 .main_content .hide {
   display: none;
