@@ -30,7 +30,7 @@ A car game made using JavaScript 🚘.
 ![Screenshot3](https://user-images.githubusercontent.com/80754608/123922439-a837ea00-d9a5-11eb-926c-15c4eeeaeafa.png)
 
 ## Video Reference
-[Video](https://user-images.githubusercontent.com/80754608/123690968-ac171f80-d872-11eb-913a-bb7273f0b400.mp4)
+[Video](https://user-images.githubusercontent.com/80754608/123922859-141a5280-d9a6-11eb-8f6a-c1f078fdf0d3.mp4)
 
 ## Link to view the App
  - Link- `https://cargame-d641b.web.app/`
