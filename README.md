@@ -25,9 +25,9 @@ A car game made using JavaScript 🚘.
   Firebase<br>
   
 ## Screenshots
-![Screenshot1](https://user-images.githubusercontent.com/80754608/123685220-137da100-d86c-11eb-93ae-f3438059ec41.png)
-![Screenshot2](https://user-images.githubusercontent.com/80754608/123685224-14163780-d86c-11eb-89d3-e3beaa315e6f.png)
-![Screenshot3](https://user-images.githubusercontent.com/80754608/123685232-15476480-d86c-11eb-9ead-3db7d5f411fc.png)
+![Screenshot1](https://user-images.githubusercontent.com/80754608/123922431-a66e2680-d9a5-11eb-8b6c-d0ec4175e62b.png)
+![Screenshot2](https://user-images.githubusercontent.com/80754608/123922434-a79f5380-d9a5-11eb-96b1-41a56a43ffd4.png)
+![Screenshot3](https://user-images.githubusercontent.com/80754608/123922439-a837ea00-d9a5-11eb-926c-15c4eeeaeafa.png)
 
 ## Video Reference
 [Video](https://user-images.githubusercontent.com/80754608/123690968-ac171f80-d872-11eb-913a-bb7273f0b400.mp4)
