@@ -2,7 +2,23 @@
 const score = document.querySelector(".score");
 const gameArea = document.querySelector(".game_area");
 const messageArea = document.querySelector(".message_area");
+const difficulty = document.getElementById("difficulty");
 let player = { speed: 8 };
+//Declaring object to store difficulty levels
+let levels = {
+  easy: 8,
+  medium: 10,
+  hard: 12,
+};
+difficulty.addEventListener("change", (event) => {
+  if (event.target.value === "easy") {
+    player.speed = levels.easy;
+  } else if (event.target.value === "medium") {
+    player.speed = levels.medium;
+  } else {
+    player.speed = levels.hard;
+  }
+});
 //Declaring object to store keys
 let keys = {
   ArrowUp: false,
